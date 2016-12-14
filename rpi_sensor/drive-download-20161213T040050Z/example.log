@@ -36,3 +36,193 @@
 12/13/2016 08:18:31 PM : Living Room
 12/13/2016 08:18:31 PM Starting new HTTP connection (1): 127.0.0.1
 12/13/2016 08:18:31 PM http://127.0.0.1:8000 "POST / HTTP/1.1" 200 None
+12/14/2016 12:27:51 AM : Living Room
+12/14/2016 12:27:51 AM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 12:27:51 AM http://127.0.0.1:8000 "POST / HTTP/1.1" 200 None
+12/14/2016 12:27:54 AM : Living Room
+12/14/2016 12:27:54 AM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 12:27:54 AM http://127.0.0.1:8000 "POST / HTTP/1.1" 200 None
+12/14/2016 12:27:57 AM : Living Room
+12/14/2016 12:27:57 AM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 12:27:57 AM http://127.0.0.1:8000 "POST / HTTP/1.1" 200 None
+12/14/2016 01:08:08 AM : Living Room
+12/14/2016 01:08:08 AM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 07:51:41 PM : Living Room
+12/14/2016 07:51:41 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 07:51:41 PM http://127.0.0.1:8000 "POST / HTTP/1.1" 200 None
+12/14/2016 07:51:44 PM : Living Room
+12/14/2016 07:51:44 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 07:51:44 PM http://127.0.0.1:8000 "POST / HTTP/1.1" 200 None
+12/14/2016 07:51:47 PM : Living Room
+12/14/2016 07:51:47 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 07:51:47 PM http://127.0.0.1:8000 "POST / HTTP/1.1" 200 None
+12/14/2016 07:51:50 PM : Living Room
+12/14/2016 07:51:50 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 07:51:50 PM http://127.0.0.1:8000 "POST / HTTP/1.1" 200 None
+12/14/2016 07:51:53 PM : Living Room
+12/14/2016 07:51:53 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 07:51:53 PM http://127.0.0.1:8000 "POST / HTTP/1.1" 200 None
+12/14/2016 07:51:56 PM : Living Room
+12/14/2016 07:51:56 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 07:51:56 PM http://127.0.0.1:8000 "POST / HTTP/1.1" 200 None
+12/14/2016 07:51:59 PM : Living Room
+12/14/2016 07:51:59 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 07:51:59 PM http://127.0.0.1:8000 "POST / HTTP/1.1" 200 None
+12/14/2016 07:52:02 PM : Living Room
+12/14/2016 07:52:02 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 07:52:02 PM http://127.0.0.1:8000 "POST / HTTP/1.1" 200 None
+12/14/2016 07:52:05 PM : Living Room
+12/14/2016 07:52:05 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 07:52:05 PM http://127.0.0.1:8000 "POST / HTTP/1.1" 200 None
+12/14/2016 07:52:08 PM : Living Room
+12/14/2016 07:52:08 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 07:52:08 PM http://127.0.0.1:8000 "POST / HTTP/1.1" 200 None
+12/14/2016 10:58:16 PM : Living Room
+12/14/2016 10:58:16 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 10:58:16 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 403 None
+12/14/2016 10:58:19 PM : Living Room
+12/14/2016 10:58:19 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 10:58:19 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 403 None
+12/14/2016 10:58:22 PM : Living Room
+12/14/2016 10:58:22 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 10:58:22 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 403 None
+12/14/2016 10:58:25 PM : Living Room
+12/14/2016 10:58:25 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 10:58:25 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 403 None
+12/14/2016 10:58:29 PM : Living Room
+12/14/2016 10:58:29 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 10:58:29 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 403 None
+12/14/2016 11:05:29 PM : Living Room
+12/14/2016 11:05:29 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:05:29 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 403 None
+12/14/2016 11:05:32 PM : Living Room
+12/14/2016 11:05:32 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:05:32 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 403 None
+12/14/2016 11:05:35 PM : Living Room
+12/14/2016 11:05:35 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:05:35 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 403 None
+12/14/2016 11:07:02 PM : Living Room
+12/14/2016 11:07:02 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:07:02 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 403 None
+12/14/2016 11:07:05 PM : Living Room
+12/14/2016 11:07:05 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:07:05 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 403 None
+12/14/2016 11:18:23 PM : Living Room
+12/14/2016 11:18:23 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:18:23 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/14/2016 11:19:01 PM : Living Room
+12/14/2016 11:19:01 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:19:01 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/14/2016 11:19:04 PM : Living Room
+12/14/2016 11:19:04 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:19:04 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/14/2016 11:19:48 PM : Living Room
+12/14/2016 11:19:48 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:19:48 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/14/2016 11:19:51 PM : Living Room
+12/14/2016 11:19:51 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:19:51 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/14/2016 11:35:20 PM : Living Room
+12/14/2016 11:36:14 PM : Living Room
+12/14/2016 11:36:14 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:36:14 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/14/2016 11:36:17 PM : Living Room
+12/14/2016 11:36:17 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:36:17 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/14/2016 11:40:39 PM : Living Room
+12/14/2016 11:40:39 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:42:11 PM : Living Room
+12/14/2016 11:42:11 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:42:11 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/14/2016 11:43:01 PM : Living Room
+12/14/2016 11:43:01 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:43:01 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/14/2016 11:43:01 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:43:01 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/14/2016 11:43:13 PM : Living Room
+12/14/2016 11:43:13 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:43:14 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/14/2016 11:43:14 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:43:14 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/14/2016 11:43:41 PM : Living Room
+12/14/2016 11:43:41 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:43:41 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/14/2016 11:43:41 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:43:41 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/14/2016 11:44:12 PM : Living Room
+12/14/2016 11:44:12 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:44:12 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/14/2016 11:44:12 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:44:12 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/14/2016 11:44:58 PM : Living Room
+12/14/2016 11:44:58 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:44:58 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/14/2016 11:44:58 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:44:58 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/14/2016 11:47:29 PM : Living Room
+12/14/2016 11:47:29 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:47:29 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/14/2016 11:47:29 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:47:29 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/14/2016 11:47:50 PM : Living Room
+12/14/2016 11:47:50 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:48:02 PM : Living Room
+12/14/2016 11:48:02 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:48:02 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/14/2016 11:48:02 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:48:02 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/14/2016 11:51:27 PM : Living Room
+12/14/2016 11:51:27 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:51:27 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/14/2016 11:51:27 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:51:27 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/14/2016 11:51:38 PM : Living Room
+12/14/2016 11:51:38 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:51:38 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/14/2016 11:51:38 PM Starting new HTTP connection (1): 127.0.0.1
+12/14/2016 11:51:38 PM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 200 None
+12/15/2016 12:06:23 AM : Living Room
+12/15/2016 12:06:23 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:06:23 AM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/15/2016 12:06:23 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:06:23 AM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/15/2016 12:06:49 AM : Living Room
+12/15/2016 12:06:49 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:06:49 AM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/15/2016 12:06:49 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:06:49 AM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/15/2016 12:06:52 AM : Living Room
+12/15/2016 12:06:52 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:06:52 AM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/15/2016 12:06:52 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:06:52 AM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/15/2016 12:07:05 AM : Living Room
+12/15/2016 12:07:05 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:07:05 AM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/15/2016 12:07:05 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:07:05 AM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/15/2016 12:34:31 AM : Living Room
+12/15/2016 12:34:31 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:34:36 AM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/15/2016 12:34:36 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:34:36 AM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/15/2016 12:50:35 AM : Living Room
+12/15/2016 12:50:35 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:50:35 AM http://127.0.0.1:8000 "GET /server/?testing%20testing%20123 HTTP/1.1" 500 None
+12/15/2016 12:50:35 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:50:35 AM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/15/2016 12:50:38 AM : Living Room
+12/15/2016 12:50:38 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:50:39 AM http://127.0.0.1:8000 "GET /server/?testing%20testing%20123 HTTP/1.1" 500 None
+12/15/2016 12:50:39 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:50:39 AM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/15/2016 12:52:59 AM : Living Room
+12/15/2016 12:52:59 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:52:59 AM http://127.0.0.1:8000 "GET /server/?testing%20testing%20123 HTTP/1.1" 500 None
+12/15/2016 12:52:59 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:52:59 AM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None
+12/15/2016 12:53:02 AM : Living Room
+12/15/2016 12:53:02 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:53:02 AM http://127.0.0.1:8000 "GET /server/?testing%20testing%20123 HTTP/1.1" 500 None
+12/15/2016 12:53:02 AM Starting new HTTP connection (1): 127.0.0.1
+12/15/2016 12:53:03 AM http://127.0.0.1:8000 "POST /server/ HTTP/1.1" 500 None

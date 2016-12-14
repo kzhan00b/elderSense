@@ -12,13 +12,26 @@ logging.basicConfig(filename = 'example.log', level=logging.DEBUG,
 
 def sensorActivate_log():
         logging.warning(': Living Room')
-        httpRequests = requests.post('http://127.0.0.1:8000')
+        
+        data = {
+            "room" : "Living Room",
+            "date" : datetime.now()
+        }
+        
+        httpRequests1 = requests.get('http://127.0.0.1:8000/server/', "testing testing 123")
+        
+        httpRequests = requests.post('http://127.0.0.1:8000/server/', json.dumps(data, default = myconverter))
 
         if (httpRequests.status_code == 200):
-                print("YAY")
+                print(httpRequests.text)
         else:   
                 print("NAY")
 
+def myconverter(o):
+    #https://code-maven.com/serialize-datetime-object-as-json-in-python
+    if isinstance(o, datetime):
+        return o.__str__()
+                
 for i in range(10):
     sensorActivate_log()
     time.sleep(3) 
