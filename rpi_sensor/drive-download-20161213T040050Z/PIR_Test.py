@@ -14,11 +14,11 @@ def sensorActivate_log():
         logging.warning(': Living Room')
         
         data = {
-            "room" : "Living Room",
+            "room" : "Living Room1",
             "date" : datetime.now()
         }
         
-        httpRequests1 = requests.get('http://127.0.0.1:8000/server/', "testing testing 123")
+        #httpRequests1 = requests.get('http://127.0.0.1:8000/server/', "testing testing 123")
         
         httpRequests = requests.post('http://127.0.0.1:8000/server/', json.dumps(data, default = myconverter))
 
