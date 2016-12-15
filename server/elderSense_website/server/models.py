@@ -5,7 +5,7 @@ from datetime import datetime
 
 class Room(models.Model):
     
-    room = models.CharField(max_length = 100)
+    room = models.CharField(max_length = 100, primary_key=True)
     
     def __str__(self):
         return self.room
@@ -16,7 +16,7 @@ class PositiveLog(models.Model):
         Room, on_delete = models.CASCADE,
     )
     
-    date = models.DateTimeField()
+    date = models.DateTimeField(primary_key=True)
     
     def __str__(self):
         #return str(type(self.date))

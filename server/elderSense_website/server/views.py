@@ -1,3 +1,5 @@
+#C:\Users\Kzhan00b\Desktop\elderSense.git\trunk\server\elderSense_website
+
 #imports
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -26,4 +28,11 @@ def index(request):
     except ObjectDoesNotExist:
         print("This Room does not exist, contact the administrator! ")
     
-    return(HttpResponse("Input received! "))
+    
+    #http://stackoverflow.com/questions/291945/how-do-i-filter-foreignkey-choices-in-a-django-modelform
+    
+    #Select all tuples from PositiveLog which belongs to the specified room
+    querySet = PositiveLog.objects.filter(room=data['room'])
+    
+    return(HttpResponse("The number of entries currently is at: " + str(querySet.count())))
+    #return(HttpResponse("Input received! "))

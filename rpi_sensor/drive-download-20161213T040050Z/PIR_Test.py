@@ -1,3 +1,5 @@
+#C:\Users\Kzhan00b\Desktop\elderSense.git\trunk\rpi_sensor\drive-download-20161213T040050Z
+
 #import RPi.GPIO as GPIO
 import time
 import json
@@ -14,7 +16,7 @@ def sensorActivate_log():
         logging.warning(': Living Room')
         
         data = {
-            "room" : "Living Room1",
+            "room" : "Living Room",
             "date" : datetime.now()
         }
         
