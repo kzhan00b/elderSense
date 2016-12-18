@@ -1,6 +1,5 @@
 #C:\Users\Kzhan00b\Desktop\elderSense.git\trunk\server\elderSense_website
 
-#imports
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
@@ -21,23 +20,26 @@ def index(request):
     data = json.loads(body_unicode)
     
     #insert data into database
-    try: 
-        tempLog = PositiveLog()
-        tempLog.room = Room.objects.get(room=data['room'])
-        tempLog.date = data['date']
-        tempLog.save()
-    
-    except ObjectDoesNotExist:
-        print("This Room does not exist, contact the administrator! ")
-    
+    insertLog(data["room"], data["date"])
     
     #http://stackoverflow.com/questions/291945/how-do-i-filter-foreignkey-choices-in-a-django-modelform
-    
     #Select all tuples from PositiveLog which belongs to the specified room
     querySet = PositiveLog.objects.filter(room=data['room'])
     
     return(HttpResponse("The number of entries currently is at: " + str(querySet.count())))
-    
+
+def insertLog(roomName, dateTime):
+    try:
+        tempLog = PositiveLog()
+        tempLog.room = Room.objects.get(room=roomName)
+        tempLog.date = dateTime
+        tempLog.save()
+        return True
+
+    except ObjectDoesNotExist:
+        print("This Room does not exist, contact the administrator! ")
+        return False
+
 def ssProcessing(request):
     changeState(True, "processState")
     boolCheck = stateFlag.objects.get(name="processState").state
@@ -52,8 +54,11 @@ def ssProcessing(request):
         #print("There are " + str( querySet.count() ) + " number of entries now!")
         time.sleep(10)
         boolCheck = stateFlag.objects.get(name="processState").state
-        
+
     print("Waking this process now!")
+    return(HttpResponse())
+
+
 
     
 def inactivityMonitor():
@@ -78,25 +83,29 @@ def inactivityMonitor():
         #Set the datetime object where the threshold time of after 15 minutes where the alert is first flagged to the elder
         #http://stackoverflow.com/questions/18406165/creating-a-timer-in-python
         timeoutThreshold = datetime.now() + timedelta(minutes=1) #timeout = 15 minutes
-        
+
+        #send alert and set elderAlert flag to True
+        print("Alert to be sent to elder's phone")
+        tempState = stateFlag.objects.get(name="elderPhoneAlertState")
+        tempState.state = True
+        tempState.save()
+
         boolAlertCheck = True
-        changeState(boolAlertCheck)
-        print("\n\nSound the alarm!!!!\n\n")
+        changeState(boolAlertCheck, "alertState")
         
         while (boolAlertCheck == True):
-            #send a http request to the elder's phone, quick http request, then come back immediately
             print("Inside the alert loop now...")
-            if (timeoutThreshold < datetime.now()): 
+            tempState = stateFlag.objects.get(name="familyPhoneAlertState")
+
+            if (timeoutThreshold < datetime.now() and not tempState.state):
                 print("\n\nALERT SENT TO FAMILY NOW\n\n") #keep alerting family? or set some limit? ****
-                
-                #insert timer here to trigger alert to family
+                tempState.state = True
+                tempState.save()
                 #put another boolean here to state if alert has been sent to family, if elder replies, need to cascade and tell family that everything is fine.
-                pass
                 
             boolAlertCheck = stateFlag.objects.get(name="alertState").state
-            print(boolAlertCheck)
+            #print(boolAlertCheck)
             time.sleep(5)
-            
     #print("Current time now is: " + currentTime.strftime("%c"))
 
 def computeTrend(request):
@@ -117,6 +126,20 @@ def androidResponse(request):
     
     #request = stateName, deviceName
     changeState(False, data["stateName"])
+    r = insertLog(data["deviceName"], datetime.now())
+    if (r == False):
+        print("Log not stored, Error.")
+
+    tempState = stateFlag.objects.get(name="familyPhoneAlertState")
+    if (tempState.state == True):
+        print("http request sent to familyPhone to notify/update that elder is ok")
+        tempState.state = False
+        tempState.save()
+    tempState = stateFlag.objects.get(name="elderPhoneAlertState")
+    if (tempState.state == True):
+        tempState.state = False
+        tempState.save()
+
     return(HttpResponse("Okay state has been changed"))
 
 def changeState(decision, stateName):
