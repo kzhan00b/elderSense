@@ -3,6 +3,13 @@ from datetime import datetime
 
 # Create your models here.
 
+class stateFlag(models.Model):
+    name = models.CharField(max_length = 100, primary_key=True, default = "alertState")
+    state = models.BooleanField(default = False)
+    
+    def __str__(self):
+        return (self.name)
+    
 class Room(models.Model):
     
     room = models.CharField(max_length = 100, primary_key=True)
