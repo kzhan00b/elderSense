@@ -20,7 +20,12 @@ def index(request):
     data = json.loads(body_unicode)
     
     #insert data into database
-    insertLog(data["room"], data["date"])
+    insertLog(data["room"])
+    #Check if alert state is true, if yes, put to false as elder is moving around
+    boolAlertCheck = stateFlag.objects.get(name="alertState")
+    if (boolAlertCheck.state == True):
+        changeState(False, "alertState")
+        disableAlerts()
     
     #http://stackoverflow.com/questions/291945/how-do-i-filter-foreignkey-choices-in-a-django-modelform
     #Select all tuples from PositiveLog which belongs to the specified room
@@ -28,15 +33,17 @@ def index(request):
     
     return(HttpResponse("The number of entries currently is at: " + str(querySet.count())))
 
-def insertLog(roomName, dateTime):
+def insertLog(roomName):
     try:
         tempLog = PositiveLog()
         tempLog.room = Room.objects.get(room=roomName)
-        tempLog.date = dateTime
+        tempLog.date = datetime.now()
+        print(str(datetime.now()))
         tempLog.save()
         return True
 
     except ObjectDoesNotExist:
+        #Maybe put some way to log this issue? 
         print("This Room does not exist, contact the administrator! ")
         return False
 
@@ -78,7 +85,7 @@ def inactivityMonitor():
     #http://stackoverflow.com/questions/1345827/how-do-i-find-the-time-difference-between-two-datetime-objects-in-python
     #http://stackoverflow.com/questions/20631855/get-the-difference-between-two-datetime-objects-in-minutes-in-python
     timeDifference = (currentTime - lastLog.date).total_seconds()
-    if (timeDifference > 15*60):
+    if (timeDifference > 1*60):
         
         #Set the datetime object where the threshold time of after 15 minutes where the alert is first flagged to the elder
         #http://stackoverflow.com/questions/18406165/creating-a-timer-in-python
@@ -101,11 +108,9 @@ def inactivityMonitor():
                 print("\n\nALERT SENT TO FAMILY NOW\n\n") #keep alerting family? or set some limit? ****
                 tempState.state = True
                 tempState.save()
-                #put another boolean here to state if alert has been sent to family, if elder replies, need to cascade and tell family that everything is fine.
                 
-            boolAlertCheck = stateFlag.objects.get(name="alertState").state
-            #print(boolAlertCheck)
             time.sleep(5)
+            boolAlertCheck = stateFlag.objects.get(name="alertState").state
     #print("Current time now is: " + currentTime.strftime("%c"))
 
 def computeTrend(request):
@@ -119,17 +124,20 @@ def computeTrend(request):
 
 @csrf_exempt
 def androidResponse(request):
-    #
-    #Assuming alert sent to elder/family, will need to 
     body_unicode = request.body.decode('utf-8')
     data = json.loads(body_unicode)
     
     #request = stateName, deviceName
     changeState(False, data["stateName"])
-    r = insertLog(data["deviceName"], datetime.now())
+    r = insertLog(data["deviceName"])
     if (r == False):
         print("Log not stored, Error.")
 
+    disableAlerts()
+    return(HttpResponse("Okay state has been changed"))
+
+def disableAlerts():
+    #need to return? KIV 
     tempState = stateFlag.objects.get(name="familyPhoneAlertState")
     if (tempState.state == True):
         print("http request sent to familyPhone to notify/update that elder is ok")
@@ -139,8 +147,6 @@ def androidResponse(request):
     if (tempState.state == True):
         tempState.state = False
         tempState.save()
-
-    return(HttpResponse("Okay state has been changed"))
 
 def changeState(decision, stateName):
     #function to change the state of the alertState flag
