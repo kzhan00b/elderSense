@@ -25,7 +25,9 @@ SECRET_KEY = 'zvd)cj8z1ct@3l#7o(fs*uk1t&j2#my@2a&r=av#k$u!8a)370'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.0.106',
+                '127.0.0.1',
+                '10.0.2.2']
 
 
 # Application definition
@@ -38,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'fcm',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -103,6 +107,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
+
+#https://django-gcm.readthedocs.io/en/latest/quickstart.html
+#https://pypi.python.org/pypi/fcm-django/
+FCM_APIKEY = 'AAAA4Rk__ek:APA91bEqZTWrNIRHXNTT8nse4yD6XSKNXalbsM46phizb-I3ZGxyzbAmVREVSyuBOBY_b_uOZtgiFZnb89_BRgXIeARrRv4vxNL5JJlgHPE0khJqOV0TWWI8C6oasZGtOLHvh_nrgB8Y'
+FCM_DEVICE_MODEL = 'server.MyDevice'
 
 LANGUAGE_CODE = 'en-us'
 

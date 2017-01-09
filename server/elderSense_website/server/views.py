@@ -3,10 +3,14 @@
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
-from .models import Room, PositiveLog, stateFlag
+from fcm.utils import get_device_model
+
+from .models import Room, PositiveLog, stateFlag, Account
 from datetime import datetime, timedelta
+
 import json
 import time
+import requests
 
 #Start of code
 @csrf_exempt
@@ -93,6 +97,43 @@ def inactivityMonitor():
 
         #send alert and set elderAlert flag to True
         print("Alert to be sent to elder's phone")
+        tempAccount = Account.objects.get(userType = "Elder")
+        phoneNumber = tempAccount.phoneNumber
+        
+        
+        #tempDevice = MyDevice.objects.get(dev_id = phoneNumber, name = tempAccount.name)
+        #regID = tempDevice.reg_id
+        
+        Device = get_device_model()
+        my_phone = Device.objects.get(dev_id = phoneNumber)
+        my_phone.send_message({
+            'message':'my test message'
+        })
+        
+        '''
+        print(regID)
+        test = {"to":regID}
+        message = {
+            'to':regID,
+            'notification':{
+                'title':'Inactivity Detected!',
+                'body':'Please move around house or deactivate alert through phone!'
+            },
+            'priority': 'high'
+        }
+        
+        r = requests.post('https://fcm.googleapis.com/fcm/send', 
+                      data=json.dumps(test),
+                      headers = {
+                          'Authorization': 'key=AAAA4Rk__ek:APA91bEqZTWrNIRHXNTT8nse4yD6XSKNXalbsM46phizb-I3ZGxyzbAmVREVSyuBOBY_b_uOZtgiFZnb89_BRgXIeARrRv4vxNL5JJlgHPE0khJqOV0TWWI8C6oasZGtOLHvh_nrgB8Y',
+                          'Content-Type': 'application/json',
+                      }
+                     )
+        
+        print(r.status_code)
+        print(r.text)
+        '''
+        
         tempState = stateFlag.objects.get(name="elderPhoneAlertState")
         tempState.state = True
         tempState.save()
@@ -113,6 +154,7 @@ def inactivityMonitor():
             boolAlertCheck = stateFlag.objects.get(name="alertState").state
     #print("Current time now is: " + currentTime.strftime("%c"))
 
+    
 def computeTrend(request):
     '''
     http://stackoverflow.com/questions/12851208/how-to-detect-significant-change-trend-in-a-time-series-data
