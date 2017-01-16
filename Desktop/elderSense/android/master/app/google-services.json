@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "966791265769",
+    "firebase_url": "https://eldersense-154817.firebaseio.com",
+    "project_id": "eldersense-154817",
+    "storage_bucket": "eldersense-154817.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966791265769:android:e60aeff65cae8072",
+        "android_client_info": {
+          "package_name": "com.sourcey.materiallogindemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "966791265769-4tc1hio0uafvj9ndnn8gf05fl23dms59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLgFDUFAr_QH0hA4P3ds5nwP-hlOX2-Jk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
