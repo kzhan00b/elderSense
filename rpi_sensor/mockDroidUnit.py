@@ -8,5 +8,6 @@ data = {
     "stateName" : "processState",
 }
 
-r = requests.get('http://127.0.0.1:8000/server/ssProcessing/', json.dumps(data))
+r = requests.get('http://192.168.0.106:8000/server/ssProcessing/', json.dumps(data))
+#r = requests.get('http://127.0.0.1:8000/server/ssProcessing/', json.dumps(data))
 #r = requests.post('http://127.0.0.1:8000/server/androidResponse/', json.dumps(data))
